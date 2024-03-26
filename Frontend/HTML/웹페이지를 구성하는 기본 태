@@ -1,0 +1,14 @@
+1. 문서 형식 정의 tag: 출력할 웹 페이지의 형식을 브라우저에게 전달, 문서의 최상위에 위치해야 하며 대소문자를 구별 X
+2. HTML tag: HTML 태그는 모든 HTML 요소의 부모 요소이며 웹페이지에 단 하나만 존재함
+  *<DOCTYPE>를 제외한 나머지 태그들은 다 <html> 안에 넣어야 한다.
+  *<html>은 lang 어트리뷰트를 사용하는 경우가 많다.
+3. head tag: head 요소는 메타데이터를 포함하기 위한 요소이며, 웹페이지에 단 하나만 존재함
+   *meta 데이터는 HTML 문서의 title,style,link,script에 대한 데이터로 화면에 표시되지 X
+   1.title tag: title 요소는 문서의 제목을 정의(정의한 제목은 브라우저의 탭에 표시됨)
+   2.style tag: style 요소에는 HTML 문서를 위한 정보를 정의함
+   3.link tag: link 요소에는 외부 리소스와의 연게 정보를 정의함(주로 HTML과 외부 CSS를 연결할 때 사용)
+   4.script tag: script 요소에는 client-side JavaScript를 정의(src 어트리뷰트를 사용하면 외부 js 파일을 로드할 수 있다.)
+4. meta tag: meta 요소는 description, keywords, author, 기타 메타데이터 정의에 사용
+   -메타 데이터는 브라우저, 검색엔진 등에 의해 사용
+   -charset 어트리뷰트는 브라우저가 사용할 문자셋을 정의함
+5. body tag: HTML 문서의 내용을 나타내며 웹페이지에 단 하나만 존재함, 메타 데이터를 제외한 웹페이지를 구성하는 대부분의 요소가 body 요소 내에 기술된다.
