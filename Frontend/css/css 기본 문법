@@ -1,0 +1,30 @@
+1.css: html이나 xml과 같은 구조화 된 문서를 화면, 종이 등에 어떻게 렌더링할 것인지를 정의하기 위한 언어
+       html의 각 요소의 style을 정의하여 화면 등에 어떻게 렌더링하면 되는지 브라우저에게 설명하기 위한 언어
+*html과 css는 각자의 문법을 갖는 별개의 언어이며 html은 css를 포함할 수 있다.
+-그러나 html없이 단독으로 존재하는 css는 의미가 없다.
+
+-css 용어
+    1.셀렉터(Selector, 선택자): 스타일을 적용하고자 하는 html 요소를 선택하기 위해 css에서 제공하는 수단
+                               ex) h1 { color:red; font-size: 12px; } 일 때 h1이 셀렉터이다.
+                                   - 위와 같은 구문을 Rule Set이라하는데 이런 Rule Set의 집합을 스타일시트라 한다.
+    2.프로퍼티(Property, 속성): 셀렉터로 html 요소를 선택하고, {} 내에 프로퍼티(속성)와 값을 지정하는 것으로 다양한 style을 정의할 수 있다.
+                                프로퍼티는 표준 스펙으로 이미 지정되어 있는 것을 사용하여야하며 사용자가 임의로 정의할 수 없다.
+                                각각의 프로퍼티는 세미콜론으로 구분함
+    3.값(Value, 속성값): 셀렉터로 지정한 html 요소에 style을 적용하기 위해 프로퍼티를 사용했다.
+                         프로퍼티의 값은 해당 프로퍼티에 사용할 수 있는 값을 '키워드'나 '크기 단위'또는 '색상 표현 단위'등의 특정 단위로 지정해야한다.(ex-px)
+    4.html과 css의 연동: html은 css를 포함할 수 있다. css를 가지고 있지 않은 html은 브라우저에서 기본으로 적용하는 css에 의해 렌더링된다.
+                       -link style: html에서 외부에 있는 css 파일을 로드하는 방식이다.
+                                   ex- <link rel="stylesheet" href="css/style.css">
+                       -Embedding style: html 내부에 css를 포함하는 방식
+                                         *매우 간단한 웹페이지의 경우는 문제될 것이 없겠지만 link style을 사용하는 것이 좋다.
+                                          (html과 css는 서로 역할이 다르므로 다른 파일로 구분되어 작성하고 관리되는 것이 바람직하다.)
+                       -inline style: html 요소의 style 프로퍼티에 css를 기술하는 방식이다.
+                                      js가 동적으로 css를 생성할 때 사용한다.
+                                      ex- <h1 style="color: red">Hello World</h1>
+5.Reset CSS 사용하기
+-모든 웹 브라우저는 디폴트 스타일을 가지고 있어 css가 없이도 작동한다. 그런데 웹브라우저에 따라 디폴트 스타일이 상이하고 지원하는 tag나 style도 제각각이러서 주의가 필요하다.
+*Reset CSS는 기본적인 html 요소의 css를 초기화하는 용도로 사용한다. 즉, 브라우저 별로 제각각인 디폴트 스타일을 하나로 통일 해준다.
+
+-자주 사용되는 Reset CSS
+    1.Eric Meyer's reset
+    2.normalize.css
