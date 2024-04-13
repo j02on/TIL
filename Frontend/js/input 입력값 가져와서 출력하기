@@ -1,0 +1,32 @@
+1. 사용자가 타이핑 할 때마다 input값 출력하기
+-html
+<input id="name" onkeyup="printName()"/>
+<div id="result"></div>
+
+*onkeyup: 키보드가 눌러졌을 때 발생하는 이벤트
+*<input id="name" onkeyup="printName()"/>: 키보드가 눌러졌을 때 printName() 메소드를 호출
+
+-js
+function printName() {
+  const name = document.getElementById('name').value;
+  document.getElementById("result").innerText = name;
+}
+
+*document.getElementById: 웹페이지에서 id로 element(모든 요소 개체가 상속되는 가장 일반적인 기본 클래스)를 찾는다.
+*const name = document.getElementById('name').value;: 찾아온 element의 value값을 읽어와서 name에 저장했다.
+*document.getElementById("result").innerText = name;: 웹페이지에서 'result' id를 가진 element를 찾아오고,
+innerText 프로퍼티를 사용하여, element의 text값을 name으로 변경해 주었습니다.
+
+2. 사용자가 입력을 완료하면 input 값 출력하기
+-html
+<input id="name" onchange="printName()"/>
+<div id="result"></div>
+
+*onkeyup: 키보드가 눌러졌을 때 발생하는 이벤트
+*<input id="name" onkeyup="printName()"/>: 키보드가 눌러졌을 때 printName() 메소드를 호출
+
+-js
+function printName() {
+  const name = document.getElementById('name').value;
+  document.getElementById("result").innerText = name;
+}
